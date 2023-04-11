@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icons/opensalsa.svg" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="salsa.css" />
+    <title>RURALIA</title>
+  </head>   
+
+  <body>
+   
+
+    <main>
+
+    <section class="header">
+    
+    <h1>RURALIA</h1>
+    <h2 >Volviendo a la raiz</h2>
+    <br/>
+    </section>
+
+    <br/>
+    <br/>
+    <br/>
+     <section class="preparation">
+       <!-- <h2>¿Qué es esto?</h2> -->
+        <code>
+        <p>
+          RURALIA es una extensión transmedia de la exposición artística XXXXXX que celebra la cultura rural colombiana a través de una colección de objetos antiguos y tradicionales utilizados en la vida diaria en las zonas rurales del país. La exposición presenta una amplia variedad de objetos que incluyen desde herramientas de trabajo, como arados y hoces, hasta objetos de la vida doméstica, como morteros y cántaros.
+
+          Cada uno de estos objetos cuenta una historia sobre la vida y el trabajo en el campo, y cómo la cultura rural ha evolucionado a lo largo del tiempo, sin embargo permanece viva hasta el día de hoy al estos seguir siendo usados por la sociedad colombiana moderna.
+        </p>
+        </code>
+    </section>
+    <!--SLIDESHOW-->
+    <section class="carrousel">
+    <h1>OBJETOS</h1>
+  </section>
+
+  <!-- Slideshow container -->
+  <section class="slideshow">
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="mortero.PNG" style="width:100%">
+      <div class="text">mortero</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="mortero.png" style="width:100%">
+      <div class="text">jarra</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="mortero.PNG" style="width:100%">
+      <div class="text">Martillo</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>  
+  </section>
+    <br/>
+    <br/>
+    <br/>
+     <!-- Slideshow container -->
+
+    
+
+    
+
+    </main>
+    <section class="header">
+      <p>Developed by Cadavinci &#9775;</p>
+    </section>
+    <script>
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+    </script>
+  </body>
+</html>
