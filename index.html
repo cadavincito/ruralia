@@ -13,13 +13,14 @@
     />
 
     <link rel="stylesheet" href="salsa.css" />
+    <!-- <script src="ruralia.js"></script> -->
     <title>RURALIA</title>
   </head>   
 
   <body>
    
 
-    <main>
+    <main style="background-color: black;">
 
     <section class="header">
     
@@ -27,45 +28,66 @@
     <h2 >Volviendo a la raiz</h2>
     <br/>
     </section>
+    <section style="display: flex; justify-content: center; align-items: center; background-color: rgb(0, 0, 0); height: 60px; display: flex;justify-content: center;align-items: center;">
+      <!-- <div style="padding:15px;"> 
+        <p style="color: rgb(255, 255, 255);"><a href="manifesto.html" style="color: rgb(255, 253, 253); font-weight: 600; font-size: 24px;">Manifesto</a></p>
+      </div> -->
+
+      <div style="padding:15px;"> 
+        <p style="color: white;"><a href="galeria.html" style="color: rgb(255, 255, 255); font-weight: 600; font-size: 24px;">Galeria</a></p>
+      </div>
+    </section>
 
     <br/>
     <br/>
     <br/>
-     <section class="preparation">
-       <!-- <h2>¿Qué es esto?</h2> -->
+     <!-- <section class="preparation" style="background-color:rgb(227, 27, 27)">
+        <h2>¿Qué es esto?</h2>
         <code>
-        <p style="color: black;">
+        <p style="color: white;">
           RURALIA es una extensión transmedia de la exposición artística <i><b>"Soberanía y diseño en la ruralidad Colombia 1983-2023"</b></i> que celebra la cultura rural colombiana a través de una colección de objetos antiguos y tradicionales utilizados en la vida diaria en las zonas rurales del país. La exposición presenta una amplia variedad de objetos que incluyen desde herramientas de trabajo, como arados y hoces, hasta objetos de la vida doméstica, como morteros y cántaros.
 
           Cada uno de estos objetos cuenta una historia sobre la vida y el trabajo en el campo, y cómo la cultura rural ha evolucionado a lo largo del tiempo, sin embargo permanece viva hasta el día de hoy al estos seguir siendo usados por la sociedad colombiana moderna.
         </p>
         </code>
-    </section>
+    </section> -->
     <!--SLIDESHOW-->
-    <section class="carrousel">
+    <!-- <section class="carrousel">
     <h1>Colección</h1>
-  </section>
+  </section> -->
 
   <!-- Slideshow container -->
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="display: flex; justify-content: center;background-color: rgb(0, 0, 0);">
+  <div id="carouselExampleIndicators" id="carru"  class="carousel slide" data-bs-ride="carousel" style="display: flex; justify-content: center;background-color: rgb(0, 0, 0);">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner" style="width: 60%; margin-top: 30px;margin-bottom: 45px;">
-      <div class="carousel-item active">
-        <img src="assets/mortero.png" class="d-block w-100" alt="First Slide">
+      <div class="carousel-item active" id="imagenPal">
+        <img src="assets/mortero.png"  class="d-block" alt="Clickable Image" >
+        <!-- <button onclick="hola()">Hola</button> -->
+      </div>
+      <div class="carousel-item" >
+        <img src="assets/cazuela.png"  class="d-block" alt="Clickable Image" >
+        <!-- <button onclick="hola()">Hola</button> -->
+      </div>
+      <div class="carousel-item" style="
+      justify-content: center;
+      align-items: center;
+      background-color: #000;" >
+        <img src="assets/tinajero.png"  class="d-block" alt="Clickable Image" style="width:360px;height:360px;" >
+        <!-- <button onclick="hola()">Hola</button> -->
+      </div>
+      <!-- <div class="carousel-item" >
+        <img src="assets/jarra.png" class="d-block" alt="Clickable Image" >
       </div>
       <div class="carousel-item">
-        <img src="assets/jarra.png" class="d-block w-100" alt="Second Slide">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/tinajero.png" class="d-block w-100" alt="Third Slide">
-      </div>
+        <img src="assets/tinajero.png" class="d-block" alt="Clickable Image">
+      </div> -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
@@ -75,10 +97,17 @@
     </button>
   </div>
   
-       <!-- Slideshow container -->
-  
+       <!-- modal -->
+  <div id="modal" style="display: none;">
+    <div>
+      <H1>Modal</H1>
+    </div>
+    <div>
+      <button onclick="cerrar()">Cerrar Modal</button>
+    </div>
+  </div>
 
-     <!-- Slideshow container -->
+  
 
     
 
@@ -86,19 +115,36 @@
 
     </main>
 
-    <section style="display: flex; justify-content: center; align-items: center; background-color: rgb(253, 253, 253); height: 60px; display: flex;justify-content: center;align-items: center;">
-      <div style="padding:15px;"> 
-        <p style="color: white;"><a href="manifesto.html" style="color: rgb(0, 0, 0); font-weight: 600; font-size: 24px;">Manifesto</a></p>
-      </div>
-
-      <div style="padding:15px;"> 
-        <p style="color: white;"><a href="galeria.html" style="color: rgb(0, 0, 0); font-weight: 600; font-size: 24px;">Galeria</a></p>
-      </div>
-    </section>
+    
 
     <section style="display: flex; justify-content: center; align-items: center; background-color: rgb(0, 0, 0); height: 60px;">
       <p style="color: rgb(255, 255, 255);font-weight: 600; font-size: 12px;">Developed by <a href="https://github.com/cadavincito" target="_blank">Cadavinci</a> &#9775;</p>
     </section>
     
+    <!-- SCRIPT -->
+    <script>
+      //imagen del carrusel
+      const image = document.getElementById('imagenPal');
+      //div del modal
+      const modal = document.getElementById('modal');
+      image.addEventListener('click', function() {
+        // Your code here
+        console.log('Image clicked!');
+        
+            modal.style.display = 'flex';
+
+           // image.style.display = 'none';
+            
+
+      });
+
+     function cerrar(){
+        // Toggle the visibility of the target element
+    console.log("cierra modal");
+        modal.style.display = 'none';
+    
+   // image.style.display = 'block';
+      }
+      </script>
   </body>
 </html>
