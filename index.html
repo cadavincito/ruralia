@@ -98,13 +98,55 @@
   </div>
   
        <!-- modal -->
-  <div id="modal" style="display: none;">
-    <div style="background-color: red;width: 100%; height: 60%;">
-      <H1>Modal</H1>
+  <div id="modal"  style="display: none;">
+   <div style="display: flex; justify-content: center;align-items: center;width: 100%; height: 60%; background-color: blueviolet;">
+    <div style="background-color: red;width: 50%; height: 100%; display: flex;flex-direction: column; justify-content: center;align-items: center;">
+      
+      <H1 style="font-family: monospace;
+      font-weight: 600;
+      font-size: 36px;
+      color: rgb(0, 0, 0); text-align: center;">Ají en Mortero</H1>
+
+      <img id="imgModal" src="assets/aji.PNG" alt="mortero">
     </div>
-    <div style="background-color: yellow; width: 100%; height: 30%;">
-      <button onclick="cerrar()">Cerrar Modal</button>
+
+    <div style="background-color: yellow; width: 50%; height: 100%; display: flex;">
+      <!-- receta -->
+      <div style="width:75%">
+        <h1 style="font-family: monospace;
+        font-weight: 600;
+        font-size: 30px;
+        color: rgb(0, 0, 0); text-align: left;">Ingredientes</h1>
+        <ul>
+          <li><p id="ingrediente">Ají (al gusto)</p></li>
+          <li><p id="ingrediente">Ajo (2-3 dientes)</p></li>
+          <li><p id="ingrediente">Sal (al gusto)</p></li>
+          <li><p id="ingrediente">Pimienta (al gusto)</p></li>
+          <li><p id="ingrediente">Jugo de limón (1-2 cucharadas)</p></li>
+          <li><p id="ingrediente">Aceite de Oliva (opcional, 1-2 cucharadas)</p></li>
+         
+        </ul>
+        <h2 style="font-family: monospace;
+        font-weight: 600;
+        font-size: 30px;
+        color: rgb(0, 0, 0); text-align: left;">preparation</h2>
+      </div>
+      <!-- boton -->
+      <div style="width:25%;position: relative;">
+        <button onclick="cerrar()" style=" position: absolute;;right:0;background-color: #e45252; border-radius: 10%; border: #000;"><h3 style="font-family: monospace;
+          font-weight: 800;
+          font-size: 1.8rem;
+          color: rgb(255, 255, 255);
+          padding: 6px;border-color: #000;">Cerrar</h3></button>
+      </div>
     </div>
+   </div>
+
+    <!-- el coso de soundcloud -->
+    <div style="background-color: rgb(0, 34, 255); width: 100%; height: 30%;display: flex; justify-content: center;align-items: center;">
+      <iframe width="70%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    
   </div>
 
   
@@ -117,8 +159,8 @@
 
     
 
-    <section style="display: flex; justify-content: center; align-items: center; background-color: rgb(0, 0, 0); height: 60px;">
-      <p style="color: rgb(255, 255, 255);font-weight: 600; font-size: 12px;">Developed by <a href="https://github.com/cadavincito" target="_blank">Cadavinci</a> &#9775;</p>
+    <section style="display: flex; justify-content: center; align-items: center; background-color: rgb(0, 0, 0); height: 60px; margin-top: 0px;">
+      <p style="color: rgb(255, 255, 255);font-weight: 600; font-size: 15px;">Developed by <a href="https://cadavincito.github.io/website/" target="_blank">Cadavinci</a> &#9775;</p>
     </section>
     
     <!-- SCRIPT -->

@@ -23,6 +23,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    /* background-color: rgb(0, 0, 0); */
   }
   
   html {
@@ -342,7 +343,7 @@
   top: 0;
   left: 0;
   background-color: rgb(210, 191, 191);
-  width: 80%;
+  width: 90%;
   height: 600px;
   z-index: 1;
   justify-content: center;
@@ -352,6 +353,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+#imgModal{
+  width: 90%; 
+  height: 60%;
+  margin-top: 6px;
+}
+
+@media (min-width: 720px){
+  #imgModal{
+    width: 330px;
+      height: 330px;
+  }
+}
+
+
 
 #imagenPal{
   display: flex;
