@@ -66,6 +66,7 @@
     </div> -->
     <div class="carousel-inner" style="width: 60%; margin-top: 30px;margin-bottom: 45px;">
       <div class="carousel-item" id="imagenPal">
+        <h1 id="descripcion" style="color:white;font-weight:600;">Mortero</h1>
         <img id="cambiable" src="assets/mortero.png"  class="d-block" alt="Clickable Image" >
         <!-- <button onclick="hola()">Hola</button> -->
       </div>
@@ -172,10 +173,11 @@
        const headerModal = document.getElementById('headerModal');
          //parrafo preparacion
        const preparacion = document.getElementById('preparacion');
+       const descripcion = document.getElementById('descripcion');
       const  istaIngredientes = document.getElementById('listaIngredientes');
 
        var imagenes = ["assets/mortero.png", "assets/cazuela.png","assets/salero.png"];
-       var headers = ["test", "2test"];
+       var descripciones = ["Mortero", "Cazuela","Salero"];
        var soundclouds = ["test", "2test"];
 
        var index = 0;
@@ -190,7 +192,7 @@
          listaIngredientes.innerHTML = "<li><p id='ingrediente'>Ají (al gusto)</p></li><li><p id='ingrediente'>Ajo (2-3 dientes)</p></li><li><p id='ingrediente'>Sal (al gusto)</p></li><li><p id='ingrediente'>Pimienta (al gusto)</p></li><li><p id='ingrediente'>Jugo de limón (1-2 cucharadas)</p></li>";
          var recetaAji = "En un mortero, agrega los ajíes picantes junto con los dientes de ajo pelados y troceados. Comienza a moler los ajíes y el ajo en el mortero con un movimiento circular utilizando el mano del mortero. Continúa machacando hasta obtener una pasta suave y bien combinada. Agrega sal al gusto y mezcla bien. Si deseas un toque de acidez, exprime 1-2 cucharadas de jugo de limón sobre la mezcla y mezcla nuevamente. Si deseas una consistencia más suave, puedes agregar aceite vegetal gradualmente mientras continúas mezclando hasta alcanzar la consistencia deseada. Por último, si deseas añadir pimienta, agrega pimienta negra molida al gusto y mezcla bien para incorporarla a la mezcla de ají en mortero.";
          preparacion.innerHTML = recetaAji;
-         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true";
+         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1534751485&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
 
 
 // image.style.display = 'none';
@@ -200,19 +202,20 @@
          imgModal.src = "assets/consome.jpg";
          // Change the <li> elements
         listaIngredientes.innerHTML = "<li><p id='ingrediente'>1 litro de agua</p></li><li><p id='ingrediente'>1 cebolla</p></li><li><p id='ingrediente'>1 zanahoria</p></li><li><p id='ingrediente'>1 rama de apio</p></li><li><p id='ingrediente'>2 dientes de ajo</p></li>";
-        var recipe = "En un mortero o procesador de alimentos, mezcla la sal marina y las hierbas secas.\nTritura o muele las hierbas junto con la sal hasta obtener una mezcla uniforme.\nTransfiere la sal de hierbas a un frasco hermético.\nEtiqueta el frasco y guárdalo para su uso posterior.\nUtiliza la sal de hierbas para sazonar tus platos favoritos.";
-         recipe.innerHTML = recetaConsome;
-         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120695972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+        var recetaConsome = "En una cazuela, calienta el agua a fuego medio.\nAgrega la cebolla, zanahoria, apio y ajos.\nOpcionalmente, añade hierbas aromáticas.\nSazona con sal y pimienta.\nHierve a fuego medio-alto durante unos 30 minutos.\nRetira la cazuela del fuego y deja enfriar.\nCuela el consomé para obtener un caldo limpio.\n¡Listo para servir como sopa ligera o utilizar como base en otras recetas!";
+         preparacion.innerHTML = recetaConsome;
+         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1534755988&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
 
-        }else{
+        }else if (index==2){
+          console.log("index2");
           modal.style.display = 'flex';
          headerModal.innerHTML = "Sal Finas Hierbas";
          imgModal.src = "assets/salecita.jpg";
          // Change the <li> elements
         listaIngredientes.innerHTML = "<li><p id='ingrediente'>1/2 libra de sal marina</p></li><li><p id='ingrediente'>2 cucharadas de hierbas secas (por ejemplo, romero, tomillo, orégano, albahaca)</p></li><li><p id='ingrediente'>1 cucharadita de ajo en polvo, pimienta negra molida u otras especias de tu elección</p></li>";
-        var recetaConsome = "En una cazuela, calienta el agua a fuego medio.\nAgrega la cebolla, zanahoria, apio y ajos.\nOpcionalmente, añade hierbas aromáticas.\nSazona con sal y pimienta.\nHierve a fuego medio-alto durante unos 30 minutos.\nRetira la cazuela del fuego y deja enfriar.\nCuela el consomé para obtener un caldo limpio.\n¡Listo para servir como sopa ligera o utilizar como base en otras recetas!";
-         preparacion.innerHTML = recetaConsome;
-         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120695972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+         var recipeSal = "En un mortero o procesador de alimentos, mezcla la sal marina y las hierbas secas.\nTritura o muele las hierbas junto con la sal hasta obtener una mezcla uniforme.\nTransfiere la sal de hierbas a un frasco hermético.\nEtiqueta el frasco y guárdalo para su uso posterior.\nUtiliza la sal de hierbas para sazonar tus platos favoritos.";
+         preparacion.innerHTML = recipeSal;
+         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1534760203&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
 
         }
          
@@ -234,15 +237,19 @@
       //Carrousel
 
       function siguiente(){
-        console.log();
+        
         if(index==2){
+          descripcion.innerHTML="Salero";
           index = 0;
           cambiable.src = imagenes[index];
+          descripcion.innerHTML=descripciones[index];
           console.log("index");
         }
         else{
           index = index+1;
           cambiable.src = imagenes[index];
+          descripcion.innerHTML=descripciones[index];
+          
         }
       }
 
@@ -251,11 +258,13 @@
         if(index==0){
           index = 2;
           cambiable.src = imagenes[index];
+          descripcion.innerHTML=descripciones[index];
           console.log("index");
         }
         else{
           index = index-1;
           cambiable.src = imagenes[index];
+          descripcion.innerHTML=descripciones[index];
         }
       }
       </script>
