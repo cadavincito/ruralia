@@ -65,8 +65,8 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div> -->
     <div class="carousel-inner" style="width: 60%; margin-top: 30px;margin-bottom: 45px;">
-      <div class="carousel-item active" id="imagenPal">
-        <img src="assets/mortero.png"  class="d-block" alt="Clickable Image" >
+      <div class="carousel-item" id="imagenPal">
+        <img id="cambiable" src="assets/mortero.png"  class="d-block" alt="Clickable Image" >
         <!-- <button onclick="hola()">Hola</button> -->
       </div>
      
@@ -78,11 +78,11 @@
         <!-- <button onclick="hola()">Hola</button> -->
       </div>
     </div>
-    <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <button onclick="previo()" class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" style="color:white;" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="color: black;">
+    <button onclick="siguiente()" class="carousel-control-next"   type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="color: black;">
       <span class="carousel-control-next-icon" aria-hidden="true" style="color: black; width: 24px;"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -93,7 +93,7 @@
    <div style="display: flex; justify-content: center;align-items: center;width: 100%; height: 80%;">
     <div style="width: 47%; height: 100%; display: flex;flex-direction: column; justify-content: center;align-items: center;">
       
-      <H1 style="font-family: monospace;
+      <H1 id="headerModal" style="font-family: monospace;
       font-weight: 600;
       font-size: 36px;
       color: rgb(0, 0, 0); text-align: center;">Ají en Mortero</H1>
@@ -137,7 +137,7 @@
 
     <!-- el coso de soundcloud -->
     <div style="background-color: rgb(31, 31, 32); width: 100%; height: 20%;display: flex; justify-content: center;align-items: center;">
-      <iframe width="70%" height="90%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <iframe id="iframe" width="70%" height="90%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
     </div>
     
   </div>
@@ -162,16 +162,54 @@
       const image = document.getElementById('imagenPal');
       //div del modal
       const modal = document.getElementById('modal');
-      image.addEventListener('click', function() {
-        // Your code here
-        console.log('Image clicked!');
+       //cambiable
+       const cambiable = document.getElementById('cambiable');
+       //iframe
+       const iframe = document.getElementById('iframe');
+       //imagen dentro modal
+       const imgModal = document.getElementById('imgModal');
+       //headerModal
+       const headerModal = document.getElementById('headerModal');
+         //parrafo preparacion
+       const preparacion = document.getElementById('preparacion');
+
+       var imagenes = ["assets/mortero.png", "assets/tinajero.png","assets/jarra.png"];
+       var headers = ["test", "2test"];
+       var soundclouds = ["test", "2test"];
+
+       var index = 0;
+      image.addEventListener('click', function(){
+         // Your code here
+         console.log('Image clicked!');
         
-            modal.style.display = 'flex';
+        if(index==0){
+         modal.style.display = 'flex';
+         headerModal.innerHTML = "Ají en Mortero";
+         imgModal.src = "assets/aji.PNG";
+         var recetaAji = "En un mortero, agrega los ajíes picantes junto con los dientes de ajo pelados y troceados. Comienza a moler los ajíes y el ajo en el mortero con un movimiento circular utilizando el mano del mortero. Continúa machacando hasta obtener una pasta suave y bien combinada. Agrega sal al gusto y mezcla bien. Si deseas un toque de acidez, exprime 1-2 cucharadas de jugo de limón sobre la mezcla y mezcla nuevamente. Si deseas una consistencia más suave, puedes agregar aceite vegetal gradualmente mientras continúas mezclando hasta alcanzar la consistencia deseada. Por último, si deseas añadir pimienta, agrega pimienta negra molida al gusto y mezcla bien para incorporarla a la mezcla de ají en mortero.";
+         preparacion.innerHTML = recetaAji;
+         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true";
 
-           // image.style.display = 'none';
-            
 
+// image.style.display = 'none';
+        }else if (index==1){
+         modal.style.display = 'flex';
+         headerModal.innerHTML = "Consomé";
+         imgModal.src = "assets/consome.jpg";
+         var recetaConsome = "En una cazuela, calienta el agua a fuego medio.\nAgrega la cebolla, zanahoria, apio y ajos.\nOpcionalmente, añade hierbas aromáticas.\nSazona con sal y pimienta.\nHierve a fuego medio-alto durante unos 30 minutos.\nRetira la cazuela del fuego y deja enfriar.\nCuela el consomé para obtener un caldo limpio.\n¡Listo para servir como sopa ligera o utilizar como base en otras recetas!";
+         preparacion.innerHTML = recetaConsome;
+         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120695972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+
+        }else{
+         odal.style.display = 'flex';
+        }
+         
       });
+
+      // function abrirModal(){
+       
+
+      // }
 
      function cerrar(){
         // Toggle the visibility of the target element
@@ -179,6 +217,34 @@
         modal.style.display = 'none';
     
    // image.style.display = 'block';
+      }
+
+      //Carrousel
+
+      function siguiente(){
+        console.log();
+        if(index==2){
+          index = 0;
+          cambiable.src = imagenes[index];
+          console.log("index");
+        }
+        else{
+          index = index+1;
+          cambiable.src = imagenes[index];
+        }
+      }
+
+      function previo(){
+        console.log();
+        if(index==0){
+          index = 2;
+          cambiable.src = imagenes[index];
+          console.log("index");
+        }
+        else{
+          index = index-1;
+          cambiable.src = imagenes[index];
+        }
       }
       </script>
   </body>
