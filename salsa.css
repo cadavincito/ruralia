@@ -342,7 +342,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(210, 191, 191);
+  background-color: rgba(211, 197, 197, 0.98);
   width: 90%;
   height: 600px;
   z-index: 1;
@@ -357,7 +357,7 @@
 
 #imgModal{
   width: 90%; 
-  height: 60%;
+  height: 48%;
   margin-top: 6px;
 }
 
@@ -368,6 +368,67 @@
   }
 }
 
+#txtModal{
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(0, 0, 0); text-align: left;
+  padding-left: 1rem;
+}
+
+@media (max-width: 538px){
+  #txtModal{
+    font-size: 18px;
+  }
+}
+
+#ingrediente{
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(0, 0, 0); text-align: left;
+}
+
+@media (max-width: 800px){
+  #ingrediente{
+    font-size: 12px;
+  }
+}
+
+  #preparacion{
+  font-family: monospace;
+  width:100%;
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(0, 0, 0); text-align: left;
+  padding-left: 2rem;
+  padding-right: 0.8rem;
+  }
+
+  @media (max-width: 1270px){
+    #preparacion{
+      font-size: 12px;
+    }
+}
+
+@media (max-width: 920px){
+  #preparacion{
+    font-size: 10px;
+  }
+}
+
+  @media (max-width: 560px){
+    #preparacion{
+      font-size: 8.22px;
+    }
+}
+
+@media (max-width: 400px){
+  #preparacion{
+    font-size: 7.5px;
+  }
+}
 
 
 #imagenPal{

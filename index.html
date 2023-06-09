@@ -99,8 +99,8 @@
   
        <!-- modal -->
   <div id="modal"  style="display: none;">
-   <div style="display: flex; justify-content: center;align-items: center;width: 100%; height: 60%; background-color: blueviolet;">
-    <div style="background-color: red;width: 50%; height: 100%; display: flex;flex-direction: column; justify-content: center;align-items: center;">
+   <div style="display: flex; justify-content: center;align-items: center;width: 100%; height: 80%;">
+    <div style="width: 47%; height: 100%; display: flex;flex-direction: column; justify-content: center;align-items: center;">
       
       <H1 style="font-family: monospace;
       font-weight: 600;
@@ -110,14 +110,11 @@
       <img id="imgModal" src="assets/aji.PNG" alt="mortero">
     </div>
 
-    <div style="background-color: yellow; width: 50%; height: 100%; display: flex;">
+    <div style=" width: 53%; height: 100%; display: flex;">
       <!-- receta -->
       <div style="width:75%">
-        <h1 style="font-family: monospace;
-        font-weight: 600;
-        font-size: 30px;
-        color: rgb(0, 0, 0); text-align: left;">Ingredientes</h1>
-        <ul>
+        <h1 id="txtModal">Ingredientes</h1>
+        <ul style="line-height: 1;">
           <li><p id="ingrediente">Ají (al gusto)</p></li>
           <li><p id="ingrediente">Ajo (2-3 dientes)</p></li>
           <li><p id="ingrediente">Sal (al gusto)</p></li>
@@ -126,25 +123,30 @@
           <li><p id="ingrediente">Aceite de Oliva (opcional, 1-2 cucharadas)</p></li>
          
         </ul>
-        <h2 style="font-family: monospace;
-        font-weight: 600;
-        font-size: 30px;
-        color: rgb(0, 0, 0); text-align: left;">preparation</h2>
+        <h1 id="txtModal">preparacion</h1>
+        <p id="preparacion">
+          En un mortero, agrega los ajíes picantes junto con los dientes de ajo pelados y troceados.
+          Comienza a moler los ajíes y el ajo en el mortero con un movimiento circular utilizando el mano del mortero. Continúa machacando hasta obtener una pasta suave y bien combinada.
+          Agrega sal al gusto y mezcla bien.
+          Si deseas un toque de acidez, exprime 1-2 cucharadas de jugo de limón sobre la mezcla y mezcla nuevamente.
+          Si deseas una consistencia más suave, puedes agregar aceite vegetal gradualmente mientras continúas mezclando hasta alcanzar la consistencia deseada.
+          Por último, si deseas añadir pimienta, agrega pimienta negra molida al gusto y mezcla bien para incorporarla a la mezcla de ají en mortero.
+        </p>
       </div>
       <!-- boton -->
       <div style="width:25%;position: relative;">
-        <button onclick="cerrar()" style=" position: absolute;;right:0;background-color: #e45252; border-radius: 10%; border: #000;"><h3 style="font-family: monospace;
+        <button onclick="cerrar()" style=" position: absolute;right:0;background-color: #ec3636; border-radius: 10%; border: #000; padding:6px;margin: 4.5px;"><h3 style="font-family: monospace;
           font-weight: 800;
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           color: rgb(255, 255, 255);
-          padding: 6px;border-color: #000;">Cerrar</h3></button>
+          border-color: #000;">Cerrar</h3></button>
       </div>
     </div>
    </div>
 
     <!-- el coso de soundcloud -->
-    <div style="background-color: rgb(0, 34, 255); width: 100%; height: 30%;display: flex; justify-content: center;align-items: center;">
-      <iframe width="70%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <div style="background-color: rgb(31, 31, 32); width: 100%; height: 20%;display: flex; justify-content: center;align-items: center;">
+      <iframe width="70%" height="90%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
     </div>
     
   </div>
