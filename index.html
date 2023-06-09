@@ -105,7 +105,7 @@
       <!-- receta -->
       <div style="width:75%">
         <h1 id="txtModal">Ingredientes</h1>
-        <ul style="line-height: 1;">
+        <ul style="line-height: 1;" id="listaIngredientes" id="ingrediente">
           <li><p id="ingrediente">Ají (al gusto)</p></li>
           <li><p id="ingrediente">Ajo (2-3 dientes)</p></li>
           <li><p id="ingrediente">Sal (al gusto)</p></li>
@@ -172,6 +172,7 @@
        const headerModal = document.getElementById('headerModal');
          //parrafo preparacion
        const preparacion = document.getElementById('preparacion');
+      const  istaIngredientes = document.getElementById('listaIngredientes');
 
        var imagenes = ["assets/mortero.png", "assets/tinajero.png","assets/jarra.png"];
        var headers = ["test", "2test"];
@@ -186,6 +187,7 @@
          modal.style.display = 'flex';
          headerModal.innerHTML = "Ají en Mortero";
          imgModal.src = "assets/aji.PNG";
+         listaIngredientes.innerHTML = "<li><p id='ingrediente'>Ají (al gusto)</p></li><li><p id='ingrediente'>Ajo (2-3 dientes)</p></li><li><p id='ingrediente'>Sal (al gusto)</p></li><li><p id='ingrediente'>Pimienta (al gusto)</p></li><li><p id='ingrediente'>Jugo de limón (1-2 cucharadas)</p></li>";
          var recetaAji = "En un mortero, agrega los ajíes picantes junto con los dientes de ajo pelados y troceados. Comienza a moler los ajíes y el ajo en el mortero con un movimiento circular utilizando el mano del mortero. Continúa machacando hasta obtener una pasta suave y bien combinada. Agrega sal al gusto y mezcla bien. Si deseas un toque de acidez, exprime 1-2 cucharadas de jugo de limón sobre la mezcla y mezcla nuevamente. Si deseas una consistencia más suave, puedes agregar aceite vegetal gradualmente mientras continúas mezclando hasta alcanzar la consistencia deseada. Por último, si deseas añadir pimienta, agrega pimienta negra molida al gusto y mezcla bien para incorporarla a la mezcla de ají en mortero.";
          preparacion.innerHTML = recetaAji;
          iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193829854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true";
@@ -196,12 +198,22 @@
          modal.style.display = 'flex';
          headerModal.innerHTML = "Consomé";
          imgModal.src = "assets/consome.jpg";
-         var recetaConsome = "En una cazuela, calienta el agua a fuego medio.\nAgrega la cebolla, zanahoria, apio y ajos.\nOpcionalmente, añade hierbas aromáticas.\nSazona con sal y pimienta.\nHierve a fuego medio-alto durante unos 30 minutos.\nRetira la cazuela del fuego y deja enfriar.\nCuela el consomé para obtener un caldo limpio.\n¡Listo para servir como sopa ligera o utilizar como base en otras recetas!";
-         preparacion.innerHTML = recetaConsome;
+         // Change the <li> elements
+        listaIngredientes.innerHTML = "<li><p id='ingrediente'>1 litro de agua</p></li><li><p id='ingrediente'>1 cebolla</p></li><li><p id='ingrediente'>1 zanahoria</p></li><li><p id='ingrediente'>1 rama de apio</p></li><li><p id='ingrediente'>2 dientes de ajo</p></li>";
+        var recipe = "En un mortero o procesador de alimentos, mezcla la sal marina y las hierbas secas.\nTritura o muele las hierbas junto con la sal hasta obtener una mezcla uniforme.\nTransfiere la sal de hierbas a un frasco hermético.\nEtiqueta el frasco y guárdalo para su uso posterior.\nUtiliza la sal de hierbas para sazonar tus platos favoritos.";
+         recipe.innerHTML = recetaConsome;
          iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120695972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
 
         }else{
-         odal.style.display = 'flex';
+          modal.style.display = 'flex';
+         headerModal.innerHTML = "Sal Finas Hierbas";
+         imgModal.src = "assets/salecita.jpg";
+         // Change the <li> elements
+        listaIngredientes.innerHTML = "<li><p id='ingrediente'>1/2 libra de sal marina</p></li><li><p id='ingrediente'>2 cucharadas de hierbas secas (por ejemplo, romero, tomillo, orégano, albahaca)</p></li><li><p id='ingrediente'>1 cucharadita de ajo en polvo, pimienta negra molida u otras especias de tu elección</p></li>";
+        var recetaConsome = "En una cazuela, calienta el agua a fuego medio.\nAgrega la cebolla, zanahoria, apio y ajos.\nOpcionalmente, añade hierbas aromáticas.\nSazona con sal y pimienta.\nHierve a fuego medio-alto durante unos 30 minutos.\nRetira la cazuela del fuego y deja enfriar.\nCuela el consomé para obtener un caldo limpio.\n¡Listo para servir como sopa ligera o utilizar como base en otras recetas!";
+         preparacion.innerHTML = recetaConsome;
+         iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120695972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+
         }
          
       });
